@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/img/fotologin1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 920px;
+    background: linear-gradient(60deg, transparent, transparent,#e0eafc3b,
+        #cfdef311);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.divForm {
+    position: absolute;
+    inset: 2px;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.divForm h2 {
+    color: #FFF;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.divForm .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.divForm .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242A;
+    letter-spacing: 0.05em;
+    transition: .5s;
+    z-index: 10;
+}
+
+.divForm .inputBox label {
+    position: absolute;
+    left: 0;
+    padding: 18px 0px 10px;
+    pointer-events: none;
+    color: #1b1818;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: .5s;
+}
+
+.divForm .inputBox input:valid~label,
+.divForm .inputBox input:focus~label {
+    color: #FFF;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+
+.divForm .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    border-radius: 4px;
+    overflow: hidden;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.divForm .inputBox input:valid~i,
+.divForm .inputBox input:focus~i {
+    height: 44px;
+}
+
+.divForm .links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.divForm .links a {
+    margin: 20px 0px;
+    font-size: .82em;
+    color: #1b1818;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.divForm .links a:hover
+ {
+    color: #FFF;
+}
+
+.divForm input[type='submit'] {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #FFF;
+    cursor: pointer;
+    font-size: .9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+    transition: .5s;
+}
+
+.divForm input[type='submit']:hover {
+    background: #000;
+    color: #FFF;
+    border-radius: 8px;
+}
