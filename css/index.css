@@ -105,22 +105,31 @@ body {
     transform: translateY(-34px);
 }
 
-.divForm .inputBox i {
+.divForm .inputBox span {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: #FFF;
+    background: #ccc;
     border-radius: 4px;
     overflow: hidden;
     pointer-events: none;
     transition: .5s;
 }
 
-.divForm .inputBox input:valid~i,
-.divForm .inputBox input:focus~i {
+.divForm .inputBox input:valid~span,
+.divForm .inputBox input:focus~span {
     height: 44px;
+}
+
+.inputBox i {
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    color: white;
+    cursor: pointer;
+    z-index: 20;
 }
 
 .divForm .links {
